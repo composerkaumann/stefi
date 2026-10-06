@@ -95,16 +95,37 @@ reserved for internal pre-release QA.
 
 ## Build and verify
 
+Open **SteFi.xcodeproj** in Xcode, select the shared **SteFi** scheme and **My Mac**,
+then use Run (Command-R) or Test (Command-U). The project includes the macOS app,
+the statically linked StereoCore library, and both existing test targets. Xcode
+uses the same Swift files as the optional Swift Package; no source copies are required.
+Hosted unit tests suppress the launch folder picker.
+
+The checked-in project requires Xcode 15 or newer and builds for Apple Silicon,
+with a macOS 14 deployment target. Local signing uses an ad-hoc signature and
+does not require an Apple Developer team. The app needs access to the selected
+media folder and installed FFmpeg binaries, so the App Sandbox is disabled.
+
+To test and build a new release from Terminal:
+
 ```sh
-swift test --scratch-path /private/tmp/stereo-cleanup-tests
+xcodebuild -project SteFi.xcodeproj -scheme SteFi -destination 'platform=macOS,arch=arm64' -derivedDataPath build/XcodeDerivedData test
 python3 Packaging/package_app.py
 ```
 
-The build script creates `dist/SteFi.app`, adds its icon and internal
-version metadata, then signs and validates it. Previous builds are retained
+The release script builds the Xcode Release scheme, creates `dist/SteFi.app`
+with its icon and internal version metadata, then signs and validates it.
+After a successful release it synchronizes `Config/Version.xcconfig` with
+`VERSION` and `BUILD_NUMBER`, so subsequent Xcode Run builds use the same version.
+Previous builds are retained
 under `dist/archive/`, also with the filename `SteFi.app`. No FFmpeg binaries or libraries
 are copied into the app. No ZIP is created. No global installation or Homebrew
 changes are made.
+
+`Resources/AppIcon.icns` is the existing display-and-two-speakers icon.
+`Packaging/make_icon.swift` can regenerate it. After adding or removing Swift files,
+run `python3 Packaging/generate_xcode_project.py` to refresh the checked-in project;
+Xcode is ready to use without running this generator first.
 
 Tests include DTS stereo, default-track warnings, sample rates, literal filenames,
 non-recursive scanning, stream-copy hashes, multiple subtitles, attachments,

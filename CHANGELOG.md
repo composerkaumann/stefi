@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.4
+
+- Add a native SteFi.xcodeproj with a shared Run/Test scheme, app target, static
+  StereoCore library and both existing test targets.
+- Release packaging now builds through Xcode; version settings are synchronized
+  with the persistent internal version files after a successful release.
+- Include the existing app icon and Info.plist in the Xcode project.
+- Hosted tests skip interactive startup panels.
+
 ## 1.0.3
 
 - App name and filename remain SteFi / SteFi.app; versions stay in internal metadata.

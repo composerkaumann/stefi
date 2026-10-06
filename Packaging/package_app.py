@@ -50,24 +50,15 @@ def main():
     final = dist / "SteFi.app"
     with tempfile.TemporaryDirectory(prefix="stereo-package-") as scratch:
         scratch = Path(scratch)
-        run("swift", "build", "--package-path", ROOT, "--scratch-path", scratch / "build", "-c", "release")
-        bin_dir = Path(run("swift", "build", "--package-path", ROOT, "--scratch-path", scratch / "build", "-c", "release", "--show-bin-path", capture=True).strip())
-        app = scratch / final.name
+        run("xcodebuild", "-project", ROOT / "SteFi.xcodeproj", "-scheme", "SteFi",
+            "-configuration", "Release", "-destination", "platform=macOS,arch=arm64",
+            "-derivedDataPath", scratch / "build", "-quiet", "build",
+            f"MARKETING_VERSION={version}", f"CURRENT_PROJECT_VERSION={build_number}")
+        app = scratch / "build" / "Build" / "Products" / "Release" / "SteFi.app"
         contents = app / "Contents"
-        (contents / "MacOS").mkdir(parents=True)
-        (contents / "Resources").mkdir()
-        shutil.copy2(bin_dir / "SteFi", contents / "MacOS" / "SteFi")
-        info = {
-            "CFBundleName": "SteFi", "CFBundleDisplayName": "SteFi",
-            "CFBundleIdentifier": "ee.music.SteFi", "CFBundleExecutable": "SteFi",
-            "CFBundlePackageType": "APPL", "CFBundleShortVersionString": version,
-            "CFBundleVersion": str(build_number), "LSMinimumSystemVersion": "14.0",
-            "NSPrincipalClass": "NSApplication", "NSHighResolutionCapable": True,
-            "CFBundleIconFile": "AppIcon", "NSHumanReadableCopyright": "SteFi · Local media utility"
-        }
-        (contents / "Info.plist").write_bytes(plistlib.dumps(info))
-        run("swift", ROOT / "Packaging" / "make_icon.swift", scratch / "AppIcon.iconset")
-        run("iconutil", "-c", "icns", scratch / "AppIcon.iconset", "-o", contents / "Resources" / "AppIcon.icns")
+        info = plistlib.loads((contents / "Info.plist").read_bytes())
+        if (info["CFBundleShortVersionString"], info["CFBundleVersion"], info["CFBundleName"]) != (version, str(build_number), "SteFi"):
+            raise RuntimeError("Built app metadata differs from the requested release")
         run("codesign", "--force", "--sign", "-", "--timestamp=none", app)
         run("codesign", "--verify", "--deep", "--strict", app)
         # Reject accidental external executable/library inclusion.
@@ -79,6 +70,9 @@ def main():
         run("codesign", "--verify", "--deep", "--strict", final)
     (ROOT / "VERSION").write_text(version + "\n")
     (ROOT / "BUILD_NUMBER").write_text(str(build_number) + "\n")
+    (ROOT / "Config" / "Version.xcconfig").write_text(
+        "// Internal version; the app name stays SteFi.\n"
+        f"MARKETING_VERSION = {version}\nCURRENT_PROJECT_VERSION = {build_number}\n")
     print(f"Ready: {final}\nVersion: {version} ({build_number})\nMinimum macOS: 14.0\nFFmpeg: external installation required")
 
 

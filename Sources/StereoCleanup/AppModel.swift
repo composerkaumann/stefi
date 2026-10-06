@@ -46,6 +46,9 @@ final class AppModel: ObservableObject {
     var copyCount: Int { pending.filter { AudioPolicy.canCopy($0.candidate.selected) }.count }
 
     func begin() {
+        // Hosted Xcode unit tests must not present interactive folder/tool panels.
+        guard NSClassFromString("XCTestCase") == nil,
+              ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else { return }
         guard !prompted else { return }
         prompted = true
         NSApp.activate(ignoringOtherApps: true)
@@ -123,7 +126,7 @@ final class AppModel: ObservableObject {
         let cancellation = CancellationToken()
         token = cancellation
         let engine = CleanupEngine(tools: tools)
-        activeTask = Task {
+        activeTask = Task { [self] in
             do {
                 let result = try await Task.detached(priority: .userInitiated) {
                     try engine.scan(folder, token: cancellation) { name, current, total in
@@ -177,7 +180,7 @@ final class AppModel: ObservableObject {
         let cancellation = CancellationToken(), engine = CleanupEngine(tools: tools)
         token = cancellation; busy = true; scanning = false; cancelling = false; fraction = 0
         totalJobs = jobs.count
-        activeTask = Task {
+        activeTask = Task { [self] in
             var completed = 0, failed = 0
             // Prevent idle system sleep during an active conversion; closing the
             // laptop or manually sleeping the Mac can still suspend the work.

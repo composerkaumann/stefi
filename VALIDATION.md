@@ -1,5 +1,17 @@
 # SteFi verification
 
+## 1.0.4 (build 5) — Xcode project
+
+- SteFi.xcodeproj recognized by Xcode with SteFi, StereoCore, StereoCoreTests
+  and SteFiTests targets; shared SteFi scheme supports Run, Test and Archive.
+- Xcode Debug tests: 25 passed, 0 failed, 0 skipped, including real FFmpeg media
+  integration tests and hosted app-selection tests.
+- Xcode Release packaging succeeded as dist/SteFi.app; strict signature validation passed.
+- Internal metadata: 1.0.4 / build 5; version xcconfig matches VERSION and BUILD_NUMBER.
+- Native arm64 executable, macOS 14 deployment target; icon matches Resources/AppIcon.icns.
+- StereoCore is statically linked. FFmpeg and ffprobe remain externally installed tools.
+- Existing output-archive packaging tests passed (2 tests).
+
 ## 1.0.3 (build 4)
 
 - Built successfully as `dist/SteFi.app`; version appears only in bundle metadata.

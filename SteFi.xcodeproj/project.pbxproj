@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		F8520349AD08FA9A2DCE3181 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xcconfig";
+			path = "Config/Version.xcconfig";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8A469B3B8E087BB2A8420D7F = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.plist.xml";
+			path = "Packaging/Info.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6550EE2942CEAF5A9D580A07 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "image.icns";
+			path = "Resources/AppIcon.icns";
+			sourceTree = "SOURCE_ROOT";
+		};
+		DA16612773C5E5AE2F67D5F7 = {
+			isa = "PBXFileReference";
+			explicitFileType = "archive.ar";
+			includeInIndex = 0;
+			path = "libStereoCore.a";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		658B376D146D10DED3AFC065 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			includeInIndex = 0;
+			path = "SteFi.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		781A86B92DBDC68D51BF2B76 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			includeInIndex = 0;
+			path = "StereoCoreTests.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		5E48437674D2A34D32222CC5 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.cfbundle";
+			includeInIndex = 0;
+			path = "SteFiTests.xctest";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		AC78A4BB80928E730008456A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCore/Engine.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		72EC230A0C4AE84D88C691FA = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCore/Media.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A6314F42E17F669EB937FC78 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCore/ProcessRunner.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9AD2BA2BF7F07050ABF22AE4 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCore/ProcessingStats.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		7588B488376CF37AC710CF95 = {
+			isa = "PBXGroup";
+			children = ("AC78A4BB80928E730008456A", "72EC230A0C4AE84D88C691FA", "A6314F42E17F669EB937FC78", "9AD2BA2BF7F07050ABF22AE4",);
+			name = "StereoCore";
+			sourceTree = "<group>";
+		};
+		4DC8F990989F64BB4E6021DF = {
+			isa = "PBXBuildFile";
+			fileRef = "AC78A4BB80928E730008456A";
+		};
+		C4AE3991B23B2CCC6F91A0B7 = {
+			isa = "PBXBuildFile";
+			fileRef = "72EC230A0C4AE84D88C691FA";
+		};
+		D3A167A0C3E7B1CF026713EB = {
+			isa = "PBXBuildFile";
+			fileRef = "A6314F42E17F669EB937FC78";
+		};
+		163E2D5F51C2977A26EF73E6 = {
+			isa = "PBXBuildFile";
+			fileRef = "9AD2BA2BF7F07050ABF22AE4";
+		};
+		A026754EBA410760B368BD09 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("4DC8F990989F64BB4E6021DF", "C4AE3991B23B2CCC6F91A0B7", "D3A167A0C3E7B1CF026713EB", "163E2D5F51C2977A26EF73E6",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20B6AF7C87C8205E2D947376 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6554B7AF2F7DEC2AC22EF13D = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64471984550ABE3746D83A5 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "StereoCore";
+				PRODUCT_MODULE_NAME = "StereoCore";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				DEFINES_MODULE = "YES";
+				SWIFT_INSTALL_OBJC_HEADER = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = "Debug";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		BD1CB6CC8FAACB06755886C4 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "StereoCore";
+				PRODUCT_MODULE_NAME = "StereoCore";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				DEFINES_MODULE = "YES";
+				SWIFT_INSTALL_OBJC_HEADER = "NO";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Release";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		887DDA32D67479993AE5EE87 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("C64471984550ABE3746D83A5", "BD1CB6CC8FAACB06755886C4",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		59FA66423E839B1CD04D0AEF = {
+			isa = "PBXNativeTarget";
+			name = "StereoCore";
+			productName = "StereoCore";
+			productReference = "DA16612773C5E5AE2F67D5F7";
+			productType = "com.apple.product-type.library.static";
+			buildConfigurationList = "887DDA32D67479993AE5EE87";
+			buildPhases = ("A026754EBA410760B368BD09", "20B6AF7C87C8205E2D947376", "6554B7AF2F7DEC2AC22EF13D",);
+			buildRules = ();
+			dependencies = ();
+		};
+		AF73A585CE23956F15D59078 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCleanup/AppModel.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		00709F4269654B476CB11514 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCleanup/ContentView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		06536B7773E0F7841253BF2A = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCleanup/InstallationView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C671A7C704D560016CEA9EEF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCleanup/ProcessingView.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		77FBFEDC651E346EED34F94D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Sources/StereoCleanup/StereoCleanupApp.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		818A1D118F90AE696637094A = {
+			isa = "PBXGroup";
+			children = ("AF73A585CE23956F15D59078", "00709F4269654B476CB11514", "06536B7773E0F7841253BF2A", "C671A7C704D560016CEA9EEF", "77FBFEDC651E346EED34F94D",);
+			name = "SteFi";
+			sourceTree = "<group>";
+		};
+		0D936D0C3B105C66F02C019C = {
+			isa = "PBXBuildFile";
+			fileRef = "AF73A585CE23956F15D59078";
+		};
+		2D61E7E37C5D8866F803F7B4 = {
+			isa = "PBXBuildFile";
+			fileRef = "00709F4269654B476CB11514";
+		};
+		8CA3DCFF17C3232E0F561280 = {
+			isa = "PBXBuildFile";
+			fileRef = "06536B7773E0F7841253BF2A";
+		};
+		D54CC5ADC362BC79C60E2B3E = {
+			isa = "PBXBuildFile";
+			fileRef = "C671A7C704D560016CEA9EEF";
+		};
+		FAA3993F57F2F59357927BCE = {
+			isa = "PBXBuildFile";
+			fileRef = "77FBFEDC651E346EED34F94D";
+		};
+		70EF367995FA7EDCBFC80DC5 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("0D936D0C3B105C66F02C019C", "2D61E7E37C5D8866F803F7B4", "8CA3DCFF17C3232E0F561280", "D54CC5ADC362BC79C60E2B3E", "FAA3993F57F2F59357927BCE",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1264A64A829C0ACBE670645F = {
+			isa = "PBXBuildFile";
+			fileRef = "DA16612773C5E5AE2F67D5F7";
+		};
+		7C49E1565CED6875048BB186 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("1264A64A829C0ACBE670645F",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E4FD20D0525C473D010F8CF = {
+			isa = "PBXBuildFile";
+			fileRef = "6550EE2942CEAF5A9D580A07";
+		};
+		DAD46B3A43E915FE754B6B5C = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("8E4FD20D0525C473D010F8CF",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB7DD28579B3433992538BF4 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "SteFi";
+				PRODUCT_MODULE_NAME = "SteFi";
+				SKIP_INSTALL = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.SteFi";
+				INFOPLIST_FILE = "Packaging/Info.plist";
+				OTHER_SWIFT_FLAGS = ("$(inherited)", "-parse-as-library",);
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = "Debug";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		03E9E4908A7C6E424505EEFF = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "SteFi";
+				PRODUCT_MODULE_NAME = "SteFi";
+				SKIP_INSTALL = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.SteFi";
+				INFOPLIST_FILE = "Packaging/Info.plist";
+				OTHER_SWIFT_FLAGS = ("$(inherited)", "-parse-as-library",);
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Release";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		3CE30A8D80695BC56BB65327 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("FB7DD28579B3433992538BF4", "03E9E4908A7C6E424505EEFF",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		49789CC577E3EF150969E69C = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "98F54143AB4E86B28C3AFEE0";
+			proxyType = 1;
+			remoteGlobalIDString = "59FA66423E839B1CD04D0AEF";
+			remoteInfo = "StereoCore";
+		};
+		8E795104AC477680750EB974 = {
+			isa = "PBXTargetDependency";
+			target = "59FA66423E839B1CD04D0AEF";
+			targetProxy = "49789CC577E3EF150969E69C";
+		};
+		D2A621D00BFCC02377491BDB = {
+			isa = "PBXNativeTarget";
+			name = "SteFi";
+			productName = "SteFi";
+			productReference = "658B376D146D10DED3AFC065";
+			productType = "com.apple.product-type.application";
+			buildConfigurationList = "3CE30A8D80695BC56BB65327";
+			buildPhases = ("70EF367995FA7EDCBFC80DC5", "7C49E1565CED6875048BB186", "DAD46B3A43E915FE754B6B5C",);
+			buildRules = ();
+			dependencies = ("8E795104AC477680750EB974",);
+		};
+		BB7E84D87264CE451E5F8D12 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/StereoCoreTests/IntegrationTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E4C2A9A8DB191C99B9E168CF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/StereoCoreTests/PolicyTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6A3EDDB62FC4D1475B0620A2 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/StereoCoreTests/ProgressTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		646A8E5FFD08C524E50F9204 = {
+			isa = "PBXGroup";
+			children = ("BB7E84D87264CE451E5F8D12", "E4C2A9A8DB191C99B9E168CF", "6A3EDDB62FC4D1475B0620A2",);
+			name = "StereoCoreTests";
+			sourceTree = "<group>";
+		};
+		D48962A192C57BE31EB67EBE = {
+			isa = "PBXBuildFile";
+			fileRef = "BB7E84D87264CE451E5F8D12";
+		};
+		4B114F149FC2EB7BCB8368EF = {
+			isa = "PBXBuildFile";
+			fileRef = "E4C2A9A8DB191C99B9E168CF";
+		};
+		B53C80B814C92A8914C40787 = {
+			isa = "PBXBuildFile";
+			fileRef = "6A3EDDB62FC4D1475B0620A2";
+		};
+		E8E3D5436628FED9B24D6764 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("D48962A192C57BE31EB67EBE", "4B114F149FC2EB7BCB8368EF", "B53C80B814C92A8914C40787",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C336E6F80E2481528411D20 = {
+			isa = "PBXBuildFile";
+			fileRef = "DA16612773C5E5AE2F67D5F7";
+		};
+		00943731C26303DD09E3EAE3 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("9C336E6F80E2481528411D20",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		175A92A185F0C8DF601B37B6 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D0A5862531EB528AAB47C0F = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "StereoCoreTests";
+				PRODUCT_MODULE_NAME = "StereoCoreTests";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.StereoCoreTests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks",);
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = "Debug";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		82E7F1148A3E448A17B67303 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "StereoCoreTests";
+				PRODUCT_MODULE_NAME = "StereoCoreTests";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.StereoCoreTests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks",);
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Release";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		3C025ABB404B6D02B45D5117 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("4D0A5862531EB528AAB47C0F", "82E7F1148A3E448A17B67303",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		98B1D46E8BDC7983442E84B6 = {
+			isa = "PBXNativeTarget";
+			name = "StereoCoreTests";
+			productName = "StereoCoreTests";
+			productReference = "781A86B92DBDC68D51BF2B76";
+			productType = "com.apple.product-type.bundle.unit-test";
+			buildConfigurationList = "3C025ABB404B6D02B45D5117";
+			buildPhases = ("E8E3D5436628FED9B24D6764", "00943731C26303DD09E3EAE3", "175A92A185F0C8DF601B37B6",);
+			buildRules = ();
+			dependencies = ("8E795104AC477680750EB974",);
+		};
+		DAF895081FE0EBFDC5CB649B = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Tests/SteFiTests/SelectionTests.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		BF6A8B56424030A5EDBC7D9F = {
+			isa = "PBXGroup";
+			children = ("DAF895081FE0EBFDC5CB649B",);
+			name = "SteFiTests";
+			sourceTree = "<group>";
+		};
+		83DA75FD62FDE37FEEF6A2FF = {
+			isa = "PBXBuildFile";
+			fileRef = "DAF895081FE0EBFDC5CB649B";
+		};
+		A9A44E2E17C737FC1285F976 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("83DA75FD62FDE37FEEF6A2FF",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45739DF74E73606FB1766104 = {
+			isa = "PBXBuildFile";
+			fileRef = "DA16612773C5E5AE2F67D5F7";
+		};
+		95618422166B3C1474A805AF = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = 2147483647;
+			files = ("45739DF74E73606FB1766104",);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59A00CFDE2A7212962EE6E = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493DD65911050205EF143875 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "SteFiTests";
+				PRODUCT_MODULE_NAME = "SteFiTests";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.SteFiTests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks",);
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SteFi.app/Contents/MacOS/SteFi";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_TARGET_NAME = "SteFi";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = "Debug";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		CE3953A918F8E36D2AF8825A = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "SteFiTests";
+				PRODUCT_MODULE_NAME = "SteFiTests";
+				SKIP_INSTALL = "YES";
+				GENERATE_INFOPLIST_FILE = "YES";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = "Manual";
+				ENABLE_APP_SANDBOX = "NO";
+				ENABLE_HARDENED_RUNTIME = "NO";
+				SWIFT_EMIT_LOC_STRINGS = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.music.SteFiTests";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks", "@loader_path/../Frameworks",);
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SteFi.app/Contents/MacOS/SteFi";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_TARGET_NAME = "SteFi";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Release";
+			baseConfigurationReference = "F8520349AD08FA9A2DCE3181";
+		};
+		940C03104C4256A089CBC38F = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("493DD65911050205EF143875", "CE3953A918F8E36D2AF8825A",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		89009D392A7878D00BF4439F = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "98F54143AB4E86B28C3AFEE0";
+			proxyType = 1;
+			remoteGlobalIDString = "D2A621D00BFCC02377491BDB";
+			remoteInfo = "SteFi";
+		};
+		A40CA6A3BDFDDC588D2B2A32 = {
+			isa = "PBXTargetDependency";
+			target = "D2A621D00BFCC02377491BDB";
+			targetProxy = "89009D392A7878D00BF4439F";
+		};
+		0689CA4778AA41755FDC2A71 = {
+			isa = "PBXNativeTarget";
+			name = "SteFiTests";
+			productName = "SteFiTests";
+			productReference = "5E48437674D2A34D32222CC5";
+			productType = "com.apple.product-type.bundle.unit-test";
+			buildConfigurationList = "940C03104C4256A089CBC38F";
+			buildPhases = ("A9A44E2E17C737FC1285F976", "95618422166B3C1474A805AF", "5E59A00CFDE2A7212962EE6E",);
+			buildRules = ();
+			dependencies = ("A40CA6A3BDFDDC588D2B2A32", "8E795104AC477680750EB974",);
+		};
+		A024F06580C79B7582C3806A = {
+			isa = "PBXGroup";
+			children = ("6550EE2942CEAF5A9D580A07",);
+			name = "Resources";
+			sourceTree = "<group>";
+		};
+		5619E268CFFE28118C19FC6A = {
+			isa = "PBXGroup";
+			children = ("F8520349AD08FA9A2DCE3181", "8A469B3B8E087BB2A8420D7F",);
+			name = "Configuration";
+			sourceTree = "<group>";
+		};
+		5151B46607EBC8890D8DFCC2 = {
+			isa = "PBXGroup";
+			children = ("DA16612773C5E5AE2F67D5F7", "658B376D146D10DED3AFC065", "781A86B92DBDC68D51BF2B76", "5E48437674D2A34D32222CC5",);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		ADCF10F76EBF2A74473E9DC4 = {
+			isa = "PBXGroup";
+			children = ("7588B488376CF37AC710CF95", "818A1D118F90AE696637094A", "646A8E5FFD08C524E50F9204", "BF6A8B56424030A5EDBC7D9F", "A024F06580C79B7582C3806A", "5619E268CFFE28118C19FC6A", "5151B46607EBC8890D8DFCC2",);
+			sourceTree = "<group>";
+		};
+		877A6BA951A2EA0025A2ABE8 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				ARCHS = "arm64";
+				ONLY_ACTIVE_ARCH = "YES";
+				SWIFT_STRICT_CONCURRENCY = "targeted";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				ENABLE_TESTABILITY = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = "Debug";
+		};
+		959134B361DD7E21ADEA3164 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CLANG_ENABLE_OBJC_ARC = "YES";
+				ARCHS = "arm64";
+				ONLY_ACTIVE_ARCH = "YES";
+				SWIFT_STRICT_CONCURRENCY = "targeted";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = "YES";
+			};
+			name = "Release";
+		};
+		247BF104A9AD002C539DA531 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("877A6BA951A2EA0025A2ABE8", "959134B361DD7E21ADEA3164",);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		98F54143AB4E86B28C3AFEE0 = {
+			isa = "PBXProject";
+			attributes = {
+				LastUpgradeCheck = "1600";
+				BuildIndependentTargetsInParallel = "YES";
+			};
+			buildConfigurationList = "247BF104A9AD002C539DA531";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "en";
+			hasScannedForEncodings = 0;
+			knownRegions = ("en", "Base",);
+			mainGroup = "ADCF10F76EBF2A74473E9DC4";
+			productRefGroup = "5151B46607EBC8890D8DFCC2";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ("59FA66423E839B1CD04D0AEF", "D2A621D00BFCC02377491BDB", "98B1D46E8BDC7983442E84B6", "0689CA4778AA41755FDC2A71",);
+		};
+	};
+	rootObject = "98F54143AB4E86B28C3AFEE0";
+}
